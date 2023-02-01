@@ -7,15 +7,13 @@
 
 s = int(input('Введите сумму чисел: '))
 p = int(input('Введите произведение чисел: '))
-c = 0
-i = 0
-j = 0
+count = 0
 
 for i in range(s + p):
-    if c:
+    if count:
         break
     for j in range(s + p):
-        if i + j == s and i * j == p and i <= 1000 and j <= 1000:
-            c = 1
+        if i + j == s and i * j == p:
+            count = 1
             print(f'X = {i} Y = {j}')
             break
