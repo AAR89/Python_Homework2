@@ -10,4 +10,7 @@ for i in range(n):
     x = int(input('Введите 0 или 1: '))
     if x == 0:
         mincountcoin += 1
-print(mincountcoin if mincountcoin<n/2 else n-mincountcoin)
+    elif x != 0 and x != 1:
+        print('Вы ввели некорректное число')
+        break
+print(f'Минимальное количество монет, которое нужно перевернуть - {mincountcoin}' if mincountcoin<n/2 else n-mincountcoin)
